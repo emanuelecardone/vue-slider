@@ -37,7 +37,8 @@ const app = new Vue(
                     title: 'Paradise',
                     text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam,'
                 },
-            ]
+            ],
+            sliderClock: null
         },
 
         methods: {
@@ -53,7 +54,21 @@ const app = new Vue(
             switchToThisIndex: function(thisIndex){
                 console.log(thisIndex);
                 this.activeObject = thisIndex;
+            },
+            // Funzione che cambia l'active item ogni 3 secondi
+            // Necessaria la arrow function per focalizzare il this sullo scope genitore
+            // L'orientamento sarà semplicemente l'incremento dato che non ha senso decrementare in questo caso
+            // Richiamo direttamente la funzione increaseIndex dato che deve fare esattamente la stessa cosa
+            autoSwitchActive: function(){
+                this.sliderClock = setInterval(() => {
+                    this.increaseIndex();
+                }, 3000);
             }
+        },
+
+        created: function(){
+            // Faccio partire autoSwitchActive al created
+            this.autoSwitchActive();
         }
 
     }
