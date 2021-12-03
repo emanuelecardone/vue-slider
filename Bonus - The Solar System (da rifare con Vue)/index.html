@@ -70,9 +70,15 @@
                 </div>
 
                 <!-- Sezione Planet Keys -->
+                <!-- Ho dovuto separare le 2 ul perché una è di keys, una di elementi array, e veniva impossibile coordinarli senza un contatore -->
                 <div class="planet_keys_wrapper d-flex justify-content-center align-items-center">
+                    <!-- Prima ul: stampa in pagina i nomi delle keys fixati per evitare il camel case -->
                     <ul class="ps-0 mb-0 text-center text-white fw-bold">
-                        <li v-for="(value,key) in solarSystem[activeObject].keysToShow">{{keysFixedNames[keyCurrentActive]}}: {{value}}</li>
+                        <li class="text-end" v-for="(element,index) in keysFixedNames">{{element}}:</li>
+                    </ul>
+                    <!-- Seconda ul: stampa in pagina i valori delle keys coordinati con l'altra ul -->
+                    <ul class="ps-0 mb-0 text-white fw-bold">
+                        <li v-for="(value,key) in solarSystem[activeObject].keysToShow">{{value}}</li>
                     </ul>
                 </div>
 

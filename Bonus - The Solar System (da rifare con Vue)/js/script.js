@@ -124,13 +124,15 @@ const app = new Vue(
             changeThemeBtnText: ['blue', 'purple', 'green'],
             // Array di nome Keys fixati
             keyCurrentActive: 0,
-            keysFixedNames: ['Name', 'Temperature', 'Satellites', 'Equatorial Diameter', 'Orbital Period', 'Orbital Speed']
+            keysFixedNames: ['Temperature', 'Satellites', 'Equatorial Diameter', 'Orbital Period', 'Orbital Speed']
 
         },
 
         methods:{
 
-            
+            keyCurrentActiveIncrease: function(){
+                keyCurrentActive++;
+            }
 
         }
     }

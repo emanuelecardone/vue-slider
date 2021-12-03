@@ -99,6 +99,7 @@ main{
 .planet_keys_wrapper{
     width: 50%;
     height: 20%;
+    gap: .5rem;
 }
 .list_key_item{
     display: none;
