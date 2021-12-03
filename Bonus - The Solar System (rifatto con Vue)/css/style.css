@@ -152,16 +152,6 @@ main{
     }
 }
 
-@keyframes active_big_img_and_text{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
-}
-
-/* HOVER */
 
 /* MEDIA */
 @media screen and (min-width: 576px){
