@@ -17,7 +17,7 @@
 <body>
     <div id="root">
 
-        <div class="app_container blue_sky_bg">
+        <div class="app_container" :class="changeThemeBtnBg[activeBg]">
             <!-- HEADER -->
             <header class="w-100 h_150p d-flex justify-content-center align-items-center">
 
@@ -41,8 +41,10 @@
                                     <div class="change_theme_btn_wrapper w-100 h-100 d-flex justify-content-center align-items-center">
                                         <!-- L'array che sto percorrendo è quello degli sfondi, quindi uso element come classe dinamica
                                         L'array col testo corrispondente al colore ha uguale lunghezza, quindi seleziono l'elemento di quell'array 
-                                        con lo stesso index di quello dei backgrounds, dato che hanno uguale lunghezza e lo stesso ordine blu - viola - verde -->
-                                        <button class="btn border border-1 border-white w-100 h-100 p-0 text-white fw-bolder text-uppercase text-center" :class="element">{{changeThemeBtnText[index]}}</button>
+                                        con lo stesso index di quello dei backgrounds, dato che hanno uguale lunghezza e lo stesso ordine blu - viola - verde
+                                        Il bottone ha anche una funzione switchBg: passa l'index attuale alla funzione che corrisponde con l'index degli sfondi
+                                        Quindi al click del pulsante, cambierà lo sfondo di app_container in base all'index collegato al pulsante -->    
+                                        <button @click='switchBg(index)' class="btn border border-1 border-white w-100 h-100 p-0 text-white fw-bolder text-uppercase text-center" :class="element">{{changeThemeBtnText[index]}}</button>
                                     </div>
                                 </div>
                             </div>

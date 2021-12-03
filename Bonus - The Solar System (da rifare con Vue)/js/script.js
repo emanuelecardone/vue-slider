@@ -118,7 +118,8 @@ const app = new Vue(
                     info: 'Neptune is the eighth and last planet from the Sun in our solar system. It is an ice giant, as it has an outer layer of hydrogen, helium, methane, ammonia and water. Beneath this layer lies a thick mantle of chemical ices and a small core of rocky material. The atmosphere of Neptune is much stormier than Uranus\' with winds up to 1,250 mph (2,000 km/h). It\'s color is blue.'
                 }
             ],
-            // Array di classi background
+            // Array di classi background 
+            activeBg: 0,
             changeThemeBtnBg: ['blue_sky_bg', 'purple_sky_bg', 'green_sky_bg'],
             // Array di contenuto testo bottoni
             changeThemeBtnText: ['blue', 'purple', 'green'],
@@ -136,30 +137,14 @@ const app = new Vue(
             },
             decreaseIndex: function(){
                 this.activeObject = (this.activeObject > 0) ? this.activeObject - 1 : this.solarSystem.length - 1;
+            },
+            switchBg: function(thisIndex){
+                this.activeBg = thisIndex;
             }
-
         }
     }
 );
                              
-
-// // SEZIONE CHANGE THEME
-// // Blue button 
-// changeThemeBlueButton.addEventListener('click', function(){
-//     pageBody.classList.remove('purple_sky_bg', 'green_sky_bg');
-//     pageBody.classList.add('blue_sky_bg');
-// });
-// // Purple button
-// changeThemePurpleButton.addEventListener('click', function(){
-//     pageBody.classList.remove('blue_sky_bg', 'green_sky_bg');
-//     pageBody.classList.add('purple_sky_bg');
-// });
-// // Green button
-// changeThemeGreenButton.addEventListener('click', function(){
-//     pageBody.classList.remove('purple_sky_bg', 'blue_sky_bg');
-//     pageBody.classList.add('green_sky_bg');
-// });
-
 
 
 
