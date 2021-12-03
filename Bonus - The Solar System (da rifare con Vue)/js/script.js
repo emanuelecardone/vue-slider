@@ -123,16 +123,11 @@ const app = new Vue(
             // Array di contenuto testo bottoni
             changeThemeBtnText: ['blue', 'purple', 'green'],
             // Array di nome Keys fixati
-            keyCurrentActive: 0,
             keysFixedNames: ['Temperature', 'Satellites', 'Equatorial Diameter', 'Orbital Period', 'Orbital Speed']
 
         },
 
         methods:{
-
-            keyCurrentActiveIncrease: function(){
-                keyCurrentActive++;
-            }
 
         }
     }
@@ -148,58 +143,25 @@ const app = new Vue(
 // // Variabili
 
 
-// const planetImageContainer = document.createElement('div');
+
 // const planetThumbsContainer = document.createElement('div');
 // const planetThumbsFluidContainer = document.createElement('div');
 // const planetThumbsRow = document.createElement('div');
-// const planetKeysContainer = document.createElement('div');
-// const keysList = document.createElement('ul');
-// const planetInfosContainer = document.createElement('div');
-// const planetInfosTextContainer = document.createElement('div');
-// const planetInfosLeftScrollDown = document.createElement('i');
-// const planetInfosRightScrollDown = document.createElement('i');
-// const sliderArrowsContainer = document.createElement('div');
-// const sliderLeftArrow = document.createElement('i');
-// const sliderMiddleTitle = document.createElement('h4');
-// const sliderRightArrow = document.createElement('i');
 
 // // Classi di stile
-// changeThemeContainer.classList.add('',  '', '', '', '', '', '')
-// changeThemeTitle.classList.add('', '', '', '', '', '');
-// changeThemeColorsContainer.classList.add();
-// changeThemeFluidContainer.classList.add();
-// changeThemeColorsRow.classList.add();
-// changeThemeBlueButton.classList.add('');
-// changeThemePurpleButton.classList.add('');
-// changeThemeGreenButton.classList.add('');
-// sliderLeftArrow.classList.add('fs-1', 'text-white', 'fw-bolder', 'fas', 'fa-arrow-circle-left');
-// sliderMiddleTitle.classList.add('fs-4', 'text-white', 'fw-bolder', 'text-uppercase', 'mb-0', 'text-center');
-// sliderRightArrow.classList.add('fs-1', 'text-white', 'fw-bolder', 'fas', 'fa-arrow-circle-right');
-// sliderArrowsContainer.classList.add('slider_arrows_wrapper', 'h_10', 'd-flex', 'justify-content-between', 'align-items-center', 'position-absolute');
-// planetTitleContainer.classList.add('');
-// planetImageContainer.classList.add('');
+
 // planetThumbsContainer.classList.add('planet_thumbs_wrapper', 'h_10', 'position-absolute');
 // planetThumbsFluidContainer.classList.add('container-fluid', 'h-100')
 // planetThumbsRow.classList.add('row', 'row-cols-8', 'h-100', );
-// planetKeysContainer.classList.add('');
-// keysList.classList.add('');
-// planetInfosContainer.classList.add('');
-// planetInfosTextContainer.classList.add('planet_infos_text_wrapper', 'h-100', 'd-flex', 'justify-content-center', 'text-center', 'text-white', 'fw-bolder');
-// planetInfosLeftScrollDown.classList.add('left_info_scroll_down', 'text-white', 'fs-2', 'fw-bold', 'fas', 'fa-angle-double-down');
-// planetInfosRightScrollDown.classList.add('right_info_scroll_down', 'text-white', 'fs-2', 'fw-bold', 'fas', 'fa-angle-double-down');
 
 // // Contenuto
-// changeThemeTitle.innerText = 'change theme';
-// sliderMiddleTitle.innerText = 'see more';
-// changeThemeBlueButton.innerText = 'blue';
-// changeThemePurpleButton.innerText = 'purple';
-// changeThemeGreenButton.innerText = 'green';
+
 
 // // Inserimento in pagina
-// pageMain.append(, , r, r, sliderArrowsContainer, planetThumbsContainer, planetKeysContainer);
+// pageMain.append(, , r, r, , planetThumbsContainer, );
 // planetThumbsContainer.appendChild(planetThumbsFluidContainer);
 // planetThumbsFluidContainer.appendChild(planetThumbsRow);
-// planetInfosContainer.append(planetInfosLeftScrollDown, planetInfosTextContainer, planetInfosRightScrollDown);
+// planetInfosContainer.append(, , );
 
 // for(let i = 0; i < 8; i++){
 
