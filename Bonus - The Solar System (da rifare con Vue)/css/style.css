@@ -103,6 +103,7 @@ main{
     width: 50%;
     height: 20%;
     gap: .5rem;
+    white-space: nowrap;
 }
 .list_key_item{
     display: none;
@@ -194,6 +195,9 @@ main{
         width: 20%;
         height: 25%;
     }
+    .planet_keys_wrapper{
+        font-size: 15px;
+    }
     .big_img_wrapper{
         width: 50%;
         height: 25%;
@@ -238,6 +242,7 @@ main{
     .slider_arrows_wrapper{
         max-width: 384px;
     }
+    
 }
 
 @media screen and (min-width: 992px){
@@ -248,6 +253,9 @@ main{
     }
     .planet_title_wrapper{
         top: 10%;
+    }
+    .planet_keys_wrapper{
+        font-size: 18px;
     }
     .thumb_img{
         width: 35px;
