@@ -93,6 +93,9 @@ main{
 .thumb_img.active{
     animation: active_thumb 1s linear infinite;
 }
+.single_thumb_wrapper{
+    cursor: pointer;
+}
 .single_thumb_wrapper.saturn img{
     width: 30px;
 }

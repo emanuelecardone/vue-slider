@@ -127,7 +127,8 @@ const app = new Vue(
             keysFixedNames: ['Temperature', 'Satellites', 'Equatorial Diameter', 'Orbital Period', 'Orbital Speed'],
             // Array di classi per le icone social
             numberOfIcons: 4,
-            iconsClasses: ['fa-twitter', 'fa-facebook', 'fa-instagram', 'fa-linkedin-in']
+            iconsClasses: ['fa-twitter', 'fa-facebook', 'fa-instagram', 'fa-linkedin-in'],
+            sliderClock: null
         },
 
         methods:{
@@ -138,9 +139,24 @@ const app = new Vue(
             decreaseIndex: function(){
                 this.activeObject = (this.activeObject > 0) ? this.activeObject - 1 : this.solarSystem.length - 1;
             },
+            switchToClickedThumb: function(thisThumbIndex){
+                this.activeObject = thisThumbIndex;
+            }, 
             switchBg: function(thisIndex){
                 this.activeBg = thisIndex;
+            },
+            autoSwitchSlider: function(){
+                this.sliderClock = setInterval(() => {
+                    this.increaseIndex();
+                }, 3000);
+            },
+            stopAutoSwitchSlider: function(){
+                clearInterval(this.sliderClock);
             }
+        },
+
+        created: function(){
+            this.autoSwitchSlider();
         }
     }
 );
