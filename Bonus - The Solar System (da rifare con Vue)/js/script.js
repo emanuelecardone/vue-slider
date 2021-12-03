@@ -23,85 +23,114 @@ const app = new Vue(
             solarSystem: [
                 {
                     name: 'Mercury',
-                    temperature: 166.85,
-                    satellites: 0,
-                    equatorialDiameter: 4879.4,
-                    orbitalPeriod: 87.96,
-                    orbitalSpeed: 47.36,
+                    keysToShow: {
+                        temperature: 166.85,
+                        satellites: 0,
+                        equatorialDiameter: 4879.4,
+                        orbitalPeriod: 87.96,
+                        orbitalSpeed: 47.36
+                    },
+                    image: 'img/mercurio.png',
                     info: 'Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun\'s planets. It is named after the Roman god Mercurius (Mercury), god of commerce, messenger of the gods, and mediator between gods and mortals, corresponding to the Greek god Hermes.'
                 },
                 {
                     name: 'Venus',
-                    temperature: 463.85,
-                    satellites: 0,
-                    equatorialDiameter: 12103.7,
-                    orbitalPeriod: 	224.70,
-                    orbitalSpeed: 35.02,
+                    keysToShow: {
+                        temperature: 463.85,
+                        satellites: 0,
+                        equatorialDiameter: 12103.7,
+                        orbitalPeriod: 	224.70,
+                        orbitalSpeed: 35.02
+                    },                    
+                    image: 'img/venere.png',
                     info: 'Venus is the second closest planet to the Sun. It is referred to as Earth\'s sister planet due to its similar strcuture, size and mass. Although Venus is not the closest planet to the Sun (in which the title goes to Mercury), it is in fact the hottest. That\'s because Venus has a thick and dense atmosphere of carbon dioxide and sulphuric acid.'	
                 },
                 {
                     name: 'Earth',
-                    temperature: 19.85,
-                    satellites: 1,
-                    equatorialDiameter: 12756.2,
-                    orbitalPeriod: 365.25,
-                    orbitalSpeed: 29.786,
+                    keysToShow: {
+                        temperature: 19.85,
+                        satellites: 1,
+                        equatorialDiameter: 12756.2,
+                        orbitalPeriod: 365.25,
+                        orbitalSpeed: 29.786
+                    },                    
+                    image: 'img/terra.png',
                     info: 'Earth (often referred to as "the earth" and in Latin known as Tellus) is third planet in the Solar System in terms of distance from the Sun, and the fifth in order of size. It is the only planet in the universe known to man to harbour life of any kind, as it is the mass of land and sea that humans live in. It is the only structure of it\'s kind known in the universe.'                    
                 },
                 {
                     name: 'Mars',
-                    temperature: -87.15,
-                    satellites: 2,
-                    equatorialDiameter: 6804.9,
-                    orbitalPeriod: 686.96,
-                    orbitalSpeed: 24.131,
+                    keysToShow: {
+                        temperature: -87.15,
+                        satellites: 2,
+                        equatorialDiameter: 6804.9,
+                        orbitalPeriod: 686.96,
+                        orbitalSpeed: 24.131
+                    },                    
+                    image: 'img/marte.png',
                     info: 'Mars is a terrestrial planet, and is the fourth planet from the Sun. The high amounts of iron in its soil causes a red-orange color, which is why it is known as "the red planet". In Roman mythology, Mars was the god of war (taken from Greek mythology, Ares, the god of war) it is thought that the planet received this god\'s name because of its red color.'
                 },
                 {
                     name: 'Jupiter',
-                    temperature: -121.15,
-                    satellites: 79,
-                    equatorialDiameter: 142984,
-                    orbitalPeriod: 11.86,
-                    orbitalSpeed: 13.070,
+                    keysToShow: {
+                        temperature: -121.15,
+                        satellites: 79,
+                        equatorialDiameter: 142984,
+                        orbitalPeriod: 11.86,
+                        orbitalSpeed: 13.070
+                    },
+                    image: 'img/giove.png',
                     info: 'Jupiter is the fifth planet from the Sun and the largest within the solar system. Jupiter and the other gas giants—Saturn, Uranus, and Neptune—are sometimes referred to as "Jovian planets." Jupiter is usually the fourth brightest object in the sky (after the Sun, the Moon and Venus); however at times Mars appears brighter than Jupiter.'
                 },
                 {
                     name: 'Saturn',
-                    temperature: -130.15,
-                    satellites: 82,
-                    equatorialDiameter: 120536,
-                    orbitalPeriod: 29.45,
-                    orbitalSpeed: 9.672,
+                    keysToShow: {
+                        temperature: -130.15,
+                        satellites: 82,
+                        equatorialDiameter: 120536,
+                        orbitalPeriod: 29.45,
+                        orbitalSpeed: 9.672
+                    },
+                    image: 'img/saturno.png',
                     info: 'Saturn is the sixth planet from the Sun. It is a gas giant (also known as a Jovian planet, after the planet Jupiter), the second-largest planet in the Solar System after Jupiter. Saturn has a prominent system of rings, consisting mostly of ice particles with a smaller amount of rocky debris and dust. It was named after the Roman God Saturn (the Greek mythology equivalent is Kronos, father of Zeus).'
                 },
                 {
                     name: 'Uranus',
-                    temperature: -205.15,
-                    satellites: 27,
-                    equatorialDiameter: 51118,
-                    orbitalPeriod: 84.07,
-                    orbitalSpeed: 6.836,
+                    keysToShow: {
+                        temperature: -205.15,
+                        satellites: 27,
+                        equatorialDiameter: 51118,
+                        orbitalPeriod: 84.07,
+                        orbitalSpeed: 6.836
+                    },
+                    image: 'img/urano.png',
                     info: 'Uranus is the seventh planet from the Sun. It is a gas giant, the third largest by diameter and fourth largest by mass. It is named after Uranus, the Greek god of the sky and progenitor of the other gods. Uranus is unique in that it was the first planet discovered in modern times.'
                 },
                 {
                     name: 'Neptune',
-                    temperature: -220.15,
-                    satellites: 14,
-                    equatorialDiameter: 49528,
-                    orbitalPeriod: 164.88,
-                    orbitalSpeed: 5.478,
+                    keysToShow: {
+                        temperature: -220.15,
+                        satellites: 14,
+                        equatorialDiameter: 49528,
+                        orbitalPeriod: 164.88,
+                        orbitalSpeed: 5.478
+                    },                    
+                    image: 'img/nettuno.png',
                     info: 'Neptune is the eighth and last planet from the Sun in our solar system. It is an ice giant, as it has an outer layer of hydrogen, helium, methane, ammonia and water. Beneath this layer lies a thick mantle of chemical ices and a small core of rocky material. The atmosphere of Neptune is much stormier than Uranus\' with winds up to 1,250 mph (2,000 km/h). It\'s color is blue.'
                 }
             ],
             // Array di classi background
             changeThemeBtnBg: ['blue_sky_bg', 'purple_sky_bg', 'green_sky_bg'],
             // Array di contenuto testo bottoni
-            changeThemeBtnText: ['blue', 'purple', 'green']
+            changeThemeBtnText: ['blue', 'purple', 'green'],
+            // Array di nome Keys fixati
+            keyCurrentActive: 0,
+            keysFixedNames: ['Name', 'Temperature', 'Satellites', 'Equatorial Diameter', 'Orbital Period', 'Orbital Speed']
 
         },
 
         methods:{
+
+            
 
         }
     }
@@ -116,7 +145,7 @@ const app = new Vue(
 // // container keys, ul keys, container infos, container arrows, arrows
 // // Variabili
 
-// const planetTitleContainer = document.createElement('div');
+
 // const planetImageContainer = document.createElement('div');
 // const planetThumbsContainer = document.createElement('div');
 // const planetThumbsFluidContainer = document.createElement('div');
@@ -146,13 +175,13 @@ const app = new Vue(
 // sliderRightArrow.classList.add('fs-1', 'text-white', 'fw-bolder', 'fas', 'fa-arrow-circle-right');
 // sliderArrowsContainer.classList.add('slider_arrows_wrapper', 'h_10', 'd-flex', 'justify-content-between', 'align-items-center', 'position-absolute');
 // planetTitleContainer.classList.add('');
-// planetImageContainer.classList.add('big_img_wrapper','d-flex', 'justify-content-center', 'align-items-center');
+// planetImageContainer.classList.add('');
 // planetThumbsContainer.classList.add('planet_thumbs_wrapper', 'h_10', 'position-absolute');
 // planetThumbsFluidContainer.classList.add('container-fluid', 'h-100')
 // planetThumbsRow.classList.add('row', 'row-cols-8', 'h-100', );
-// planetKeysContainer.classList.add('planet_keys_wrapper', 'd-flex', 'justify-content-center', 'align-items-center');
-// keysList.classList.add('ps-0', 'mb-0', 'text-center', 'text-white', 'fw-bold');
-// planetInfosContainer.classList.add('planet_infos_wrapper', 'd-flex', 'justify-content-between', 'align-items-center');
+// planetKeysContainer.classList.add('');
+// keysList.classList.add('');
+// planetInfosContainer.classList.add('');
 // planetInfosTextContainer.classList.add('planet_infos_text_wrapper', 'h-100', 'd-flex', 'justify-content-center', 'text-center', 'text-white', 'fw-bolder');
 // planetInfosLeftScrollDown.classList.add('left_info_scroll_down', 'text-white', 'fs-2', 'fw-bold', 'fas', 'fa-angle-double-down');
 // planetInfosRightScrollDown.classList.add('right_info_scroll_down', 'text-white', 'fs-2', 'fw-bold', 'fas', 'fa-angle-double-down');
@@ -165,7 +194,7 @@ const app = new Vue(
 // changeThemeGreenButton.innerText = 'green';
 
 // // Inserimento in pagina
-// pageMain.append(, planetInfosContainer, planetTitleContainer, planetImageContainer, sliderArrowsContainer, planetThumbsContainer, planetKeysContainer);
+// pageMain.append(, , r, r, sliderArrowsContainer, planetThumbsContainer, planetKeysContainer);
 // planetThumbsContainer.appendChild(planetThumbsFluidContainer);
 // planetThumbsFluidContainer.appendChild(planetThumbsRow);
 // planetInfosContainer.append(planetInfosLeftScrollDown, planetInfosTextContainer, planetInfosRightScrollDown);

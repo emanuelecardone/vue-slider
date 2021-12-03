@@ -81,15 +81,9 @@ main{
     height: 20%;
 }
 .big_img{
-    display: none;
     width: 75%;
-    
 }
-.big_img.active{
-    display: block;
-    animation: active_big_img_and_text .25s linear 1;
-    
-}
+
 .big_img.saturno_img{
     width: 100%;
 }

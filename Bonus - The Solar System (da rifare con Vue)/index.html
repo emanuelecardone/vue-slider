@@ -50,10 +50,30 @@
                     </div>
                 </div>
 
+                <!-- Sezione Planet Infos -->
+                <div class="planet_infos_wrapper d-flex justify-content-between align-items-center text-white text-center">
+                    <!-- Le info corrisponderanno a quelle del pianeta attivo in base ad activeObject da Vue -->
+                    <p class="planet_infos">{{solarSystem[activeObject].info}}</p>
+                </div>
+
                 <!-- Sezione Planet Title -->
                 <div class="planet_title_wrapper w-25 h_10 d-flex justify-content-center align-items-center position-absolute fs-1 text-white fw-bolder">
                     <!-- Il titolo corrisponderà a quello del pianeta attivo in base ad activeObject da Vue -->
                     <h2 class="planet_title">{{solarSystem[activeObject].name}}</h2>
+                </div>
+
+                <!-- Sezione Planet Image -->
+                <div class="big_img_wrapper d-flex justify-content-center align-items-center">
+                    <!-- L'immagine(tramite src) corrisponderà a quella del pianeta attivo in base ad activeObject da Vue
+                         l'alt corrisponderà al nome del pianeta attivo -->
+                    <img class="big_img" :src="solarSystem[activeObject].image" :alt="solarSystem[activeObject].name">
+                </div>
+
+                <!-- Sezione Planet Keys -->
+                <div class="planet_keys_wrapper d-flex justify-content-center align-items-center">
+                    <ul class="ps-0 mb-0 text-center text-white fw-bold">
+                        <li v-for="(value,key) in solarSystem[activeObject].keysToShow">{{keysFixedNames[keyCurrentActive]}}: {{value}}</li>
+                    </ul>
                 </div>
 
             </main>
