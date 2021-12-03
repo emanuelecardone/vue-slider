@@ -114,6 +114,22 @@
             <!-- FOOTER -->
             <footer class="w-100 h_100p d-flex justify-content-center align-items-center">
 
+                <div class="social_wrapper h-50">
+                    <div class="container-fluid h-100">
+                        <div class="row row-cols-4 h-100">
+                            <!-- Uso il numberOfIcons per imporre un limite al ciclo (corrisponde a 4) -->
+                            <div v-for="(element,index) in numberOfIcons" class="col">
+                                <div class="social_sub_wrapper w-100 h-100 d-flex justify-content-center align-items-center">
+                                    <a href="#">
+                                        <!-- Stampa la classe corrispondente al logo (incastrata con l'index del ciclo con 4 iterazioni) -->
+                                        <i class="fab text-white fs-3" :class="iconsClasses[index]"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </footer>
         </div>
 

@@ -123,8 +123,10 @@ const app = new Vue(
             // Array di contenuto testo bottoni
             changeThemeBtnText: ['blue', 'purple', 'green'],
             // Array di nome Keys fixati
-            keysFixedNames: ['Temperature', 'Satellites', 'Equatorial Diameter', 'Orbital Period', 'Orbital Speed']
-
+            keysFixedNames: ['Temperature', 'Satellites', 'Equatorial Diameter', 'Orbital Period', 'Orbital Speed'],
+            // Array di classi per le icone social
+            numberOfIcons: 4,
+            iconsClasses: ['fa-twitter', 'fa-facebook', 'fa-instagram', 'fa-linkedin-in']
         },
 
         methods:{
@@ -134,110 +136,6 @@ const app = new Vue(
 );
                              
 
-// // INIZIO
-
-// // MAIN
-// const pageMain = document.querySelector('main');
-// // Container change theme, change theme, container titolo, container immagini, immagini
-// // container keys, ul keys, container infos, container arrows, arrows
-// // Variabili
-
-
-
-
-// const planetThumbsFluidContainer = document.createElement('div');
-// const planetThumbsRow = document.createElement('div');
-
-// // Classi di stile
-
-// planetThumbsContainer.classList.add('');
-// planetThumbsFluidContainer.classList.add('
-// planetThumbsRow.classList.add( );
-
-// // Contenuto
-
-
-// // Inserimento in pagina
-
-// planetInfosContainer.append(, , );
-
-// for(let i = 0; i < 8; i++){
-
-//  
-//     const currentThumbsCol = document.createElement('div');
-//     const currentSingleThumbContainer = document.createElement('div');
-//     currentThumbsCol.classList.add('col');
-//     currentSingleThumbContainer.classList.add('');
-//     planetThumbsRow.appendChild();
-//     currentThumbsCol.appendChild();
-    
-// }
-// 
-// // FOOTER
-// const pageFooter = document.querySelector('footer');
-// // Sezione social
-// // Variabili
-// const socialContainer = document.createElement('div');
-// const socialFluidContainer = document.createElement('div');
-// const socialRow = document.createElement('div');
-// const twitterLink = document.createElement('a');
-// twitterLink.href = '#';
-// const facebookLink = document.createElement('a');
-// facebookLink.href = '#';
-// const instagramLink = document.createElement('a');
-// instagramLink.href = '#';
-// const linkedinLink = document.createElement('a');
-// linkedinLink.href = '#';
-// const twitterLogo = document.createElement('i');
-// const facebookLogo = document.createElement('i');
-// const instagramLogo = document.createElement('i');
-// const linkedinLogo = document.createElement('i');
-
-// // Classi di stile
-// socialContainer.classList.add('social_wrapper', 'h-50');
-// socialFluidContainer.classList.add('container-fluid', 'h-100');
-// socialRow.classList.add('row', 'row-cols-4', 'h-100');
-// twitterLogo.classList.add('fab', 'fa-twitter', 'text-white', 'fs-3');
-// facebookLogo.classList.add('fab', 'fa-facebook', 'text-white', 'fs-3');
-// instagramLogo.classList.add('fab', 'fa-instagram', 'text-white', 'fs-3');
-// linkedinLogo.classList.add('fab', 'fa-linkedin-in', 'text-white', 'fs-3');
-
-// // Inserimento in pagina
-// pageFooter.appendChild(socialContainer);
-// socialContainer.appendChild(socialFluidContainer);
-// socialFluidContainer.appendChild(socialRow);
-// for(let i = 0; i < 4; i++){
-//     const currentSocialCol = document.createElement('div');
-//     const currentSocialWrapper = document.createElement('div');
-
-//     currentSocialCol.classList.add('col');
-//     currentSocialWrapper.classList.add('w-100', 'h-100', 'd-flex', 'justify-content-center', 'align-items-center');
-
-//     currentSocialCol.appendChild(currentSocialWrapper);
-
-//     switch(i){
-//         case 0:
-//             currentSocialWrapper.appendChild(twitterLink);
-//             twitterLink.appendChild(twitterLogo);
-//             break;
-//         case 1:
-//             currentSocialWrapper.appendChild(facebookLink);
-//             facebookLink.appendChild(facebookLogo);
-//             break;
-//         case 2:
-//             currentSocialWrapper.appendChild(instagramLink);
-//             instagramLink.appendChild(instagramLogo);
-//             break;
-//         case 3:
-//             currentSocialWrapper.appendChild(linkedinLink);
-//             linkedinLink.appendChild(linkedinLogo);
-//             break;    
-//     }
-//     socialRow.appendChild(currentSocialCol);
-    
-// }
-
-        
 
 
 // // Oggetto attivo
