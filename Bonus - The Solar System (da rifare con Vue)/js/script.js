@@ -131,37 +131,17 @@ const app = new Vue(
 
         methods:{
 
+            increaseIndex: function(){
+                this.activeObject = (this.activeObject < this.solarSystem.length - 1) ? this.activeObject + 1 : 0;
+            },
+            decreaseIndex: function(){
+                this.activeObject = (this.activeObject > 0) ? this.activeObject - 1 : this.solarSystem.length - 1;
+            }
+
         }
     }
 );
                              
-
-
-
-// // Oggetto attivo
-// let activeObject = 0;
-
-// // Richiamo alla macro funzione inserimento content iniziale
-// fillingContainersUp(solarSystem, activeObject);
-
-
-// // Richiamo alla funzione che inquadra il numero di keys
-// const numberOfKeys = getKeysAmount(solarSystem[activeObject]);
-    
-// // Immagine grande active
-// document.getElementsByClassName('big_img')[activeObject].classList.add('active');
-// // Immagine piccola active
-// document.getElementsByClassName('thumb_img')[activeObject].classList.add('active');
-// // Titolo nome pianeta active
-// document.getElementsByClassName('main_planet_title')[activeObject].classList.add('active');
-// // "li" active
-// for(let i = 0; i < numberOfKeys - 1; i++){
-//     document.getElementsByClassName(`li_${activeObject}`)[i].classList.add('active');
-// }
-// // Info active
-// document.getElementsByClassName('info_text')[activeObject].classList.add('active');
-
-
 
 // // SEZIONE CHANGE THEME
 // // Blue button 
@@ -184,51 +164,6 @@ const app = new Vue(
 
 
 
-// // SEZIONE SLIDER
-// // Left arrow
-// sliderLeftArrow.addEventListener('click', function(){
-
-//     document.getElementsByClassName('big_img')[activeObject].classList.remove('active');
-//     document.getElementsByClassName('thumb_img')[activeObject].classList.remove('active');
-//     document.getElementsByClassName('main_planet_title')[activeObject].classList.remove('active');
-//     for(let i = 0; i < numberOfKeys - 1; i++){
-//         document.getElementsByClassName(`li_${activeObject}`)[i].classList.remove('active');
-//     }
-//     document.getElementsByClassName('info_text')[activeObject].classList.remove('active');
-
-//     activeObject = (activeObject > 0) ? activeObject - 1 : solarSystem.length - 1;
-    
-//     document.getElementsByClassName('big_img')[activeObject].classList.add('active');
-//     document.getElementsByClassName('thumb_img')[activeObject].classList.add('active');
-//     document.getElementsByClassName('main_planet_title')[activeObject].classList.add('active');
-//     for(let i = 0; i < numberOfKeys - 1; i++){
-//         document.getElementsByClassName(`li_${activeObject}`)[i].classList.add('active');
-//     }
-//     document.getElementsByClassName('info_text')[activeObject].classList.add('active');
-    
-// });
-
-// // Right arrow
-// sliderRightArrow.addEventListener('click', function(){
-
-//     document.getElementsByClassName('big_img')[activeObject].classList.remove('active');
-//     document.getElementsByClassName('thumb_img')[activeObject].classList.remove('active');
-//     document.getElementsByClassName('main_planet_title')[activeObject].classList.remove('active');
-//     for(let i = 0; i < numberOfKeys - 1; i++){
-//         document.getElementsByClassName(`li_${activeObject}`)[i].classList.remove('active');
-//     }
-//     document.getElementsByClassName('info_text')[activeObject].classList.remove('active');
-
-//     activeObject = (activeObject < solarSystem.length - 1) ? activeObject + 1 : 0;
-    
-//     document.getElementsByClassName('big_img')[activeObject].classList.add('active');
-//     document.getElementsByClassName('thumb_img')[activeObject].classList.add('active');
-//     document.getElementsByClassName('main_planet_title')[activeObject].classList.add('active');
-//     for(let i = 0; i < numberOfKeys - 1; i++){
-//         document.getElementsByClassName(`li_${activeObject}`)[i].classList.add('active');
-//     }
-//     document.getElementsByClassName('info_text')[activeObject].classList.add('active');
-// });
 
 
 
@@ -238,137 +173,5 @@ const app = new Vue(
 
 
 
-// // Macro funzione
-// // Funzione inserimento content
-// // Questa funzione aggiungerà anche il resto delle cose più avanti)
-// function fillingContainersUp(ListOfPlanets, thisObject){
 
-//     // Variabile per il pianeta corrente
-//     const currentActivePlanet = ListOfPlanets[thisObject];
-
-//     // AGGIUNTA IMMAGINI (grandi e thumbs)
-//     for(let i = 0; i < ListOfPlanets.length; i++){
-
-//         let currentSourceName;
-//         const currentPlanetImage = document.createElement('img');
-//         // Necessarie le 2 immagini diverse opppure non le aggiunge in entrambi i containers
-//         const currentSingleThumbContainer = document.getElementsByClassName('single_thumb_wrapper')[i];
-//         const currentPlanetThumb = document.createElement('img');
-//         switch(i){
-//             case 0:
-//                 currentSourceName = 'mercurio';
-//                 break;
-//             case 1:
-//                 currentSourceName = 'venere';
-//                 break;
-//             case 2:
-//                 currentSourceName = 'terra';
-//                 break;
-//             case 3:
-//                 currentSourceName = 'marte';
-//                 break;
-//             case 4:
-//                 currentSourceName = 'giove';
-//                 break;
-//             case 5:
-//                 currentSourceName = 'saturno';
-//                 break;
-//             case 6:
-//                 currentSourceName = 'urano';
-//                 break;
-//             case 7:
-//                 currentSourceName = 'nettuno';
-//                 break;                            
-//         }
-//         currentPlanetImage.src = `img/${currentSourceName}.png`;
-//         currentPlanetImage.alt = `Immagine di ${currentSourceName}`;
-//         currentPlanetThumb.src = `img/${currentSourceName}.png`;
-//         currentPlanetThumb.alt = `Immagine di ${currentSourceName}`;
-
-//         currentPlanetImage.classList.add('big_img', `${currentSourceName}_img`);
-//         currentPlanetThumb.classList.add('thumb_img', `${currentSourceName}_img`, 'position-relative');
-
-//         planetImageContainer.appendChild(currentPlanetImage);
-//         currentSingleThumbContainer.appendChild(currentPlanetThumb);
-        
-//         // Variabile per il pianeta attuale
-//         const currentPlanet = ListOfPlanets[i];
-//         // Destrutturazione oggetto pianeta (Mi serve solo per il nome)
-//         const {name} = currentPlanet;
-
-//         // AGGIUNTA TITOLO NOME PIANETA
-//         const currentPlanetTitle = document.createElement('h2');
-//         currentPlanetTitle.classList.add('main_planet_title', 'fw-bold');
-//         currentPlanetTitle.innerText = name;
-//         planetTitleContainer.appendChild(currentPlanetTitle);
-            
-    
-//         // AGGIUNTA KEYS NELLA UL 
-        
-//         // Richiamo alla funzione che fixa il camelCase nei nomi delle keys
-//         const fixedNamesList = getKeysLayoutName(currentActivePlanet);
-//         // Il giro parte da dopo name perché il name non fa parte della ul quindi deve saltarlo
-//         // mi serve un counter parallelo per gestire anche l'array di nomi fixati
-//         // Il counter dell'array può partire da 0 perché non contiene "name"
-//         let fixedNamesCounter = 0;
-//         for(let key in currentActivePlanet){
-//             if(!(key === 'name')){
-
-//                 const currentKey = currentPlanet[key];
-//                 const currentKeyListObject = document.createElement('li');
-//                 const currentFixedName = fixedNamesList[fixedNamesCounter]; 
-//                 currentKeyListObject.innerHTML = `${currentFixedName}: ${currentKey}`;
-//                 currentKeyListObject.classList.add('mb-2', 'list_key_item', `li_${i}`);
-//                 keysList.appendChild(currentKeyListObject);
-//                 fixedNamesCounter++;
-//             }
-//         }
-
-//         // AGGIUNTA TESTI NELLA SEZIONE INFOS
-//         planetInfosTextContainer.innerHTML += infosArray[i];
-        
-//     }
-    
-// }
-
-
-
-// // Ritorna numero chiavi (da descrivere bene dopo)
-// function getKeysAmount (currentObject){
-//     let keysAmount = 0;
-//     for(let key in currentObject){
-//         keysAmount++;
-//     }
-//     return keysAmount;
-// }
-
-// // Fixa il nome delle keys per evitare il camelCase in pagina (da descrivere bene dopo)
-// // Il name non serve
-// function getKeysLayoutName (currentObject){
-//     const fixedNames = [];
-//     for(let key in currentObject){
-//         let currentName; 
-//         switch(key){
-//             case 'temperature':
-//                 currentName = 'Temperature';
-//                 break;
-//             case 'satellites':
-//                 currentName = 'Satellites';
-//                 break;
-//             case 'equatorialDiameter':
-//                 currentName = 'Equatorial Diameter';
-//                 break;
-//             case 'orbitalPeriod':
-//                 currentName = 'Orbital period';
-//                 break;
-//             case 'orbitalSpeed':
-//                 currentName = 'Orbital speed';
-//                 break;            
-//         }
-//         if(!(key === 'name')){
-//             fixedNames.push(currentName);
-//         }
-//     }
-//     return fixedNames;
-// }
 

@@ -75,9 +75,9 @@
 
                 <!-- Sezione Arrows Slider -->
                 <div class="slider_arrows_wrapper h_10 d-flex justify-content-between align-items-center position-absolute">
-                    <i class="fs-1 text-white fw-bolder fas fa-arrow-circle-left"></i>
+                    <i @click="decreaseIndex" class="fs-1 text-white fw-bolder fas fa-arrow-circle-left"></i>
                     <h4 class="fs-4 text-white fw-bolder text-uppercase mb-0 text-center">see more</h4>
-                    <i class="fs-1 text-white fw-bolder fas fa-arrow-circle-right"></i>
+                    <i @click="increaseIndex" class="fs-1 text-white fw-bolder fas fa-arrow-circle-right"></i>
                 </div>
 
                 <!-- Sezione Planet Thumbs -->
@@ -86,9 +86,10 @@
                         <div class="row row-cols-8 h-100">
                             <!-- Ciclo nell'array del solar system per prendere la src di ogni immagine -->
                             <div v-for="(element,index) in solarSystem" class="col">
-                                <div class="single_thumb_wrapper w-100 h-100 d-flex justify-content-center align-items-center">
-                                    <!-- Assegno src dell'immagine attuale, alt e classe dinamica corrispondenti al nome del pianeta attuale, ma la classe la trasformo in minuscolo -->
-                                    <img class="thumb_img position-relative" :class="element.name.toLowerCase()" :src="element.image" :alt="element.name">
+                                <!-- Assegno la classe corrispondente al pianeta al container e non all'immagine poiché essa ha già una classe dinamica condizionale che va in conflitto -->
+                                <div class="single_thumb_wrapper w-100 h-100 d-flex justify-content-center align-items-center" :class="element.name.toLowerCase()">
+                                    <!-- Assegno src dell'immagine attuale, alt e classe dinamica corrispondenti al nome del pianeta attuale, più classe active in base ad activeObject -->
+                                    <img class="thumb_img position-relative" :class="{'active': activeObject === index}" :src="element.image" :alt="element.name">
                                 </div>
                             </div>
                         </div>
