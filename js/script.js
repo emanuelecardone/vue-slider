@@ -59,10 +59,15 @@ const app = new Vue(
             // Necessaria la arrow function per focalizzare il this sullo scope genitore
             // L'orientamento sarà semplicemente l'incremento dato che non ha senso decrementare in questo caso
             // Richiamo direttamente la funzione increaseIndex dato che deve fare esattamente la stessa cosa
+            // La funzione verrà fatta partire anche dal mouseleave
             autoSwitchActive: function(){
                 this.sliderClock = setInterval(() => {
                     this.increaseIndex();
                 }, 3000);
+            },
+            // Funzione che blocca l'autoplay dello slider (sarà collegata al mouseenter sullo slider)
+            stopAutoSwitchActive: function(){
+                clearInterval(this.sliderClock);
             }
         },
 
