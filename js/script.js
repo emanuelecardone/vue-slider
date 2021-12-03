@@ -41,7 +41,12 @@ const app = new Vue(
         },
 
         methods: {
-
+            increaseIndex: function(){
+                this.activeObject = (this.activeObject < this.sliderObjects.length - 1) ? this.activeObject + 1 : 0;
+            },
+            decreaseIndex: function(){
+                this.activeObject = (this.activeObject > 0) ? this.activeObject - 1 : this.sliderObjects.length - 1;
+            }
         }
 
     }
