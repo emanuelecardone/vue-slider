@@ -32,6 +32,9 @@
 }
 
 /* Single Thumb */
+.single-thumb{
+    cursor: pointer;
+}
 .single-thumb img {
     width: 100%;
     height: 100%;
