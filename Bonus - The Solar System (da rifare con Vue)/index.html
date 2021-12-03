@@ -29,6 +29,7 @@
             <!-- MAIN -->
             <main class="w-100 d-flex flex-column justify-content-center align-items-center flex-md-row position-relative">
 
+                <!-- Sezione Change Theme -->
                 <!-- Il container viene creato solo se nell'array di backgrounds e testo bottoni è presente almeno un elemento, altrimenti metterei dei bottoni vuoti -->
                 <div v-if="changeThemeBtnBg.length > 0 && changeThemeBtnText.length > 0" class="change_theme_wrapper d-flex flex-column justify-content-around justify-content-md-between align-items-center position-absolute">
                     <h4 class="change_theme_title text-white text-center text-uppercase mb-0 fw-bolder">change theme</h4>
@@ -40,13 +41,19 @@
                                     <div class="change_theme_btn_wrapper w-100 h-100 d-flex justify-content-center align-items-center">
                                         <!-- L'array che sto percorrendo è quello degli sfondi, quindi uso element come classe dinamica
                                         L'array col testo corrispondente al colore ha uguale lunghezza, quindi seleziono l'elemento di quell'array 
-                                        con lo stesso index di quello dei backgrounds, dato che hanno uguale lunghezza -->
+                                        con lo stesso index di quello dei backgrounds, dato che hanno uguale lunghezza e lo stesso ordine blu - viola - verde -->
                                         <button class="btn border border-1 border-white w-100 h-100 p-0 text-white fw-bolder text-uppercase text-center" :class="element">{{changeThemeBtnText[index]}}</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
+
+                <!-- Sezione Planet Title -->
+                <div class="planet_title_wrapper w-25 h_10 d-flex justify-content-center align-items-center position-absolute fs-1 text-white fw-bolder">
+                    <!-- Il titolo corrisponderà a quello del pianeta attivo in base ad activeObject da Vue -->
+                    <h2 class="planet_title">{{solarSystem[activeObject].name}}</h2>
                 </div>
 
             </main>

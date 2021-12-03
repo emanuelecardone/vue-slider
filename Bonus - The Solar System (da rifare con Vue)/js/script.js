@@ -16,7 +16,9 @@ const app = new Vue(
         el: '#root',
 
         data: {
-
+            
+            // Active Object
+            activeObject: 0,
             // Array di oggetti "Pianeta"
             solarSystem: [
                 {
@@ -113,14 +115,7 @@ const app = new Vue(
 // // Container change theme, change theme, container titolo, container immagini, immagini
 // // container keys, ul keys, container infos, container arrows, arrows
 // // Variabili
-// const changeThemeContainer = document.createElement('div');
-// const changeThemeTitle = document.createElement('h4');
-// const changeThemeColorsContainer = document.createElement('div');
-// const changeThemeFluidContainer = document.createElement('div');
-// const changeThemeColorsRow = document.createElement('div');
-// const changeThemeBlueButton = document.createElement('button');
-// const changeThemePurpleButton = document.createElement('button');
-// const changeThemeGreenButton = document.createElement('button');
+
 // const planetTitleContainer = document.createElement('div');
 // const planetImageContainer = document.createElement('div');
 // const planetThumbsContainer = document.createElement('div');
@@ -150,7 +145,7 @@ const app = new Vue(
 // sliderMiddleTitle.classList.add('fs-4', 'text-white', 'fw-bolder', 'text-uppercase', 'mb-0', 'text-center');
 // sliderRightArrow.classList.add('fs-1', 'text-white', 'fw-bolder', 'fas', 'fa-arrow-circle-right');
 // sliderArrowsContainer.classList.add('slider_arrows_wrapper', 'h_10', 'd-flex', 'justify-content-between', 'align-items-center', 'position-absolute');
-// planetTitleContainer.classList.add('planet_title_wrapper', 'w-25', 'h_10', 'd-flex', 'justify-content-center', 'align-items-center', 'position-absolute', 'fs-1', 'text-white', 'fw-bolder');
+// planetTitleContainer.classList.add('');
 // planetImageContainer.classList.add('big_img_wrapper','d-flex', 'justify-content-center', 'align-items-center');
 // planetThumbsContainer.classList.add('planet_thumbs_wrapper', 'h_10', 'position-absolute');
 // planetThumbsFluidContainer.classList.add('container-fluid', 'h-100')
