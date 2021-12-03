@@ -7,6 +7,7 @@
 // (V) Ci sarà poi una lista dei pianeti più piccola in alto, e anche lì l'active sarà evidenziato
 // (V) Ci saranno 3 sfondi diversi a tema spazio, l'utente potrà cambiare sfondo quando vuole
 // (V) Ogni pianeta deve avere una sezione "About"
+// (X) Rifare con Vue
 
 Vue.config.devtools = true;
 
@@ -15,6 +16,8 @@ const app = new Vue(
         el: '#root',
 
         data: {
+
+            // Array di oggetti "Pianeta"
             solarSystem: [
                 {
                     name: 'Mercury',
@@ -88,7 +91,12 @@ const app = new Vue(
                     orbitalSpeed: 5.478,
                     info: 'Neptune is the eighth and last planet from the Sun in our solar system. It is an ice giant, as it has an outer layer of hydrogen, helium, methane, ammonia and water. Beneath this layer lies a thick mantle of chemical ices and a small core of rocky material. The atmosphere of Neptune is much stormier than Uranus\' with winds up to 1,250 mph (2,000 km/h). It\'s color is blue.'
                 }
-            ]
+            ],
+            // Array di classi background
+            changeThemeBtnBg: ['blue_sky_bg', 'purple_sky_bg', 'green_sky_bg'],
+            // Array di contenuto testo bottoni
+            changeThemeBtnText: ['blue', 'purple', 'green']
+
         },
 
         methods:{
@@ -130,14 +138,14 @@ const app = new Vue(
 // const sliderRightArrow = document.createElement('i');
 
 // // Classi di stile
-// changeThemeContainer.classList.add('change_theme_wrapper',  'd-flex', 'flex-column', 'justify-content-around', 'justify-content-md-between', 'align-items-center', 'position-absolute')
-// changeThemeTitle.classList.add('change_theme_title', 'text-white', 'text-center', 'text-uppercase', 'mb-0', 'fw-bolder');
-// changeThemeColorsContainer.classList.add('change_theme_colors_wrapper', 'w_80', 'h-50', 'd-flex', 'justify-content-center', 'align-items-center');
-// changeThemeFluidContainer.classList.add('container-fluid', 'h-100');
-// changeThemeColorsRow.classList.add('row', 'row-cols-3', 'h-100');
-// changeThemeBlueButton.classList.add('btn', 'border', 'border-1', 'border-white', 'blue_button', 'w-100', 'h-100', 'p-0', 'text-white', 'fw-bolder', 'text-uppercase', 'text-center', 'blue_sky_bg');
-// changeThemePurpleButton.classList.add('btn', 'border', 'border-1', 'border-white', 'purple_button', 'w-100', 'h-100', 'p-0', 'text-white', 'fw-bolder', 'text-uppercase', 'text-center', 'purple_sky_bg');
-// changeThemeGreenButton.classList.add('btn', 'border', 'border-1', 'border-white', 'green_button', 'w-100', 'h-100', 'p-0', 'text-white', 'fw-bolder', 'text-uppercase', 'text-center', 'green_sky_bg');
+// changeThemeContainer.classList.add('',  '', '', '', '', '', '')
+// changeThemeTitle.classList.add('', '', '', '', '', '');
+// changeThemeColorsContainer.classList.add();
+// changeThemeFluidContainer.classList.add();
+// changeThemeColorsRow.classList.add();
+// changeThemeBlueButton.classList.add('');
+// changeThemePurpleButton.classList.add('');
+// changeThemeGreenButton.classList.add('');
 // sliderLeftArrow.classList.add('fs-1', 'text-white', 'fw-bolder', 'fas', 'fa-arrow-circle-left');
 // sliderMiddleTitle.classList.add('fs-4', 'text-white', 'fw-bolder', 'text-uppercase', 'mb-0', 'text-center');
 // sliderRightArrow.classList.add('fs-1', 'text-white', 'fw-bolder', 'fas', 'fa-arrow-circle-right');
@@ -162,36 +170,14 @@ const app = new Vue(
 // changeThemeGreenButton.innerText = 'green';
 
 // // Inserimento in pagina
-// pageMain.append(changeThemeContainer, planetInfosContainer, planetTitleContainer, planetImageContainer, sliderArrowsContainer, planetThumbsContainer, planetKeysContainer);
-// changeThemeContainer.append(changeThemeTitle, changeThemeColorsContainer);
-// changeThemeColorsContainer.appendChild(changeThemeFluidContainer);
-// changeThemeFluidContainer.appendChild(changeThemeColorsRow);
+// pageMain.append(, planetInfosContainer, planetTitleContainer, planetImageContainer, sliderArrowsContainer, planetThumbsContainer, planetKeysContainer);
 // planetThumbsContainer.appendChild(planetThumbsFluidContainer);
 // planetThumbsFluidContainer.appendChild(planetThumbsRow);
 // planetInfosContainer.append(planetInfosLeftScrollDown, planetInfosTextContainer, planetInfosRightScrollDown);
 
 // for(let i = 0; i < 8; i++){
 
-//     if(i < 3){
-//         const currentThemeCol = document.createElement('div');
-//         const currentButtonContainer = document.createElement('div');
-//         currentThemeCol.classList.add('col');
-//         currentButtonContainer.classList.add('w-100', 'h-100','d-flex', 'justify-content-center', 'align-items-center');
-//         changeThemeColorsRow.appendChild(currentThemeCol);
-//         currentThemeCol.appendChild(currentButtonContainer);
-//         switch(i){
-//             case 0:
-//                 currentButtonContainer.appendChild(changeThemeBlueButton);
-//                 break;
-//             case 1:
-//                 currentButtonContainer.appendChild(changeThemePurpleButton);
-//                 break;
-//             case 2:
-//                 currentButtonContainer.appendChild(changeThemeGreenButton);        
-//                 break;
-//         }
-//     }
-
+//  
 //     const currentThumbsCol = document.createElement('div');
 //     const currentSingleThumbContainer = document.createElement('div');
 //     currentThumbsCol.classList.add('col');
@@ -267,127 +253,6 @@ const app = new Vue(
     
 // }
 
-
-// // ARRAY SOLAR SYSTEM
-// const solarSystem = [
-//     {
-//         name: 'Mercury',
-//         temperature: 166.85,
-//         satellites: 0,
-//         equatorialDiameter: 4879.4,
-//         orbitalPeriod: 87.96,
-//         orbitalSpeed: 47.36
-//     },
-//     {
-//         name: 'Venus',
-//         temperature: 463.85,
-//         satellites: 0,
-//         equatorialDiameter: 12103.7,
-//         orbitalPeriod: 	224.70,
-//         orbitalSpeed: 35.02	
-//     },
-//     {
-//         name: 'Earth',
-//         temperature: 19.85,
-//         satellites: 1,
-//         equatorialDiameter: 12756.2,
-//         orbitalPeriod: 365.25,
-//         orbitalSpeed: 29.786
-//     },
-//     {
-//         name: 'Mars',
-//         temperature: -87.15,
-//         satellites: 2,
-//         equatorialDiameter: 6804.9,
-//         orbitalPeriod: 686.96,
-//         orbitalSpeed: 24.131
-//     },
-//     {
-//         name: 'Jupiter',
-//         temperature: -121.15,
-//         satellites: 79,
-//         equatorialDiameter: 142984,
-//         orbitalPeriod: 11.86,
-//         orbitalSpeed: 13.070
-//     },
-//     {
-//         name: 'Saturn',
-//         temperature: -130.15,
-//         satellites: 82,
-//         equatorialDiameter: 120536,
-//         orbitalPeriod: 29.45,
-//         orbitalSpeed: 9.672
-//     },
-//     {
-//         name: 'Uranus',
-//         temperature: -205.15,
-//         satellites: 27,
-//         equatorialDiameter: 51118,
-//         orbitalPeriod: 84.07,
-//         orbitalSpeed: 6.836
-//     },
-//     {
-//         name: 'Neptune',
-//         temperature: -220.15,
-//         satellites: 14,
-//         equatorialDiameter: 49528,
-//         orbitalPeriod: 164.88,
-//         orbitalSpeed: 5.478
-//     }
-// ];
-
-// // TESTI PER LA SEZIONE INFOS
-// const infosArray = [];
-// // Mercurio
-// const mercuryInfo = `
-//     <span class="info_text">
-//         Mercury is the smallest planet in the Solar System and the closest to the Sun. Its orbit around the Sun takes 87.97 Earth days, the shortest of all the Sun\'s planets. It is named after the Roman god Mercurius (Mercury), god of commerce, messenger of the gods, and mediator between gods and mortals, corresponding to the Greek god Hermes.
-//     </span>
-// `;
-// // Venere
-// const venusInfo = `
-//     <span class="info_text">
-//         Venus is the second closest planet to the Sun. It is referred to as Earth's sister planet due to its similar strcuture, size and mass. Although Venus is not the closest planet to the Sun (in which the title goes to Mercury), it is in fact the hottest. That's because Venus has a thick and dense atmosphere of carbon dioxide and sulphuric acid.
-//     </span>
-// `;
-// // Terra
-// const earthInfo = `
-//     <span class="info_text">
-//         Earth (often referred to as "the earth" and in Latin known as Tellus) is third planet in the Solar System in terms of distance from the Sun, and the fifth in order of size. It is the only planet in the universe known to man to harbour life of any kind, as it is the mass of land and sea that humans live in. It is the only structure of it's kind known in the universe. 
-//     </span>
-// `;
-// // Marte
-// const marsInfo = `
-//     <span class="info_text">
-//         Mars is a terrestrial planet, and is the fourth planet from the Sun. The high amounts of iron in its soil causes a red-orange color, which is why it is known as "the red planet". In Roman mythology, Mars was the god of war (taken from Greek mythology, Ares, the god of war) it is thought that the planet received this god's name because of its red color. 
-//     </span>
-// `;
-// // Giove
-// const jupiterInfo = `
-//     <span class="info_text">
-//         Jupiter is the fifth planet from the Sun and the largest within the solar system. Jupiter and the other gas giants—Saturn, Uranus, and Neptune—are sometimes referred to as "Jovian planets." Jupiter is usually the fourth brightest object in the sky (after the Sun, the Moon and Venus); however at times Mars appears brighter than Jupiter.
-//     </span>
-// `;
-// // Saturno
-// const saturnInfo = `
-//     <span class="info_text">
-//         Saturn is the sixth planet from the Sun. It is a gas giant (also known as a Jovian planet, after the planet Jupiter), the second-largest planet in the Solar System after Jupiter. Saturn has a prominent system of rings, consisting mostly of ice particles with a smaller amount of rocky debris and dust. It was named after the Roman God Saturn (the Greek mythology equivalent is Kronos, father of Zeus).
-//     </span>
-// `;
-// // Urano
-// const uranusInfo = `
-//     <span class="info_text">
-//         Uranus is the seventh planet from the Sun. It is a gas giant, the third largest by diameter and fourth largest by mass. It is named after Uranus, the Greek god of the sky and progenitor of the other gods. Uranus is unique in that it was the first planet discovered in modern times.
-//     </span>
-// `;
-// // Nettuno
-// const neptuneInfo = `
-//     <span class="info_text">
-//         Neptune is the eighth and last planet from the Sun in our solar system. It is an ice giant, as it has an outer layer of hydrogen, helium, methane, ammonia and water. Beneath this layer lies a thick mantle of chemical ices and a small core of rocky material. The atmosphere of Neptune is much stormier than Uranus' with winds up to 1,250 mph (2,000 km/h). It's color is blue.
-//     </span>
-// `;
-// infosArray.push(mercuryInfo, venusInfo, earthInfo, marsInfo, jupiterInfo, saturnInfo, uranusInfo, neptuneInfo);
-        
         
 
 

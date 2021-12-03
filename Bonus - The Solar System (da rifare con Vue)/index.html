@@ -20,13 +20,37 @@
         <div class="app_container blue_sky_bg">
             <!-- HEADER -->
             <header class="w-100 h_150p d-flex justify-content-center align-items-center">
+
                 <h1 class="header_title text-white text-center text-uppercase fw-bold">the s<img src="img/sole.png" alt="immagine del sole" class="sun_img w_50p position-relative">lar system</h1>
+
             </header>
+
 
             <!-- MAIN -->
             <main class="w-100 d-flex flex-column justify-content-center align-items-center flex-md-row position-relative">
 
+                <!-- Il container viene creato solo se nell'array di backgrounds e testo bottoni è presente almeno un elemento, altrimenti metterei dei bottoni vuoti -->
+                <div v-if="changeThemeBtnBg.length > 0 && changeThemeBtnText.length > 0" class="change_theme_wrapper d-flex flex-column justify-content-around justify-content-md-between align-items-center position-absolute">
+                    <h4 class="change_theme_title text-white text-center text-uppercase mb-0 fw-bolder">change theme</h4>
+                    <div class="change_theme_colors_wrapper w_80 h-50 d-flex justify-content-center align-items-center'">
+                        <div class="container-fluid h-100">
+                            <div class="row row-cols-3 h-100">
+                                <!-- Ciclo v-for (nell'array di sfondi) per creare 3 col con contenuto diverso    -->
+                                <div v-for="(element,index) in changeThemeBtnBg" class="col">
+                                    <div class="change_theme_btn_wrapper w-100 h-100 d-flex justify-content-center align-items-center">
+                                        <!-- L'array che sto percorrendo è quello degli sfondi, quindi uso element come classe dinamica
+                                        L'array col testo corrispondente al colore ha uguale lunghezza, quindi seleziono l'elemento di quell'array 
+                                        con lo stesso index di quello dei backgrounds, dato che hanno uguale lunghezza -->
+                                        <button class="btn border border-1 border-white w-100 h-100 p-0 text-white fw-bolder text-uppercase text-center" :class="element">{{changeThemeBtnText[index]}}</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </main>
+
 
             <!-- FOOTER -->
             <footer class="w-100 h_100p d-flex justify-content-center align-items-center">
