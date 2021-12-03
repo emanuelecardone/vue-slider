@@ -84,7 +84,7 @@ main{
     width: 75%;
 }
 
-.big_img.saturno_img{
+.big_img.saturn{
     width: 100%;
 }
 .thumb_img{
@@ -93,7 +93,7 @@ main{
 .thumb_img.active{
     animation: active_thumb 1s linear infinite;
 }
-.thumb_img.saturno_img{
+.thumb_img.saturn{
     width: 30px;
 }
 .planet_keys_wrapper{
@@ -167,7 +167,7 @@ main{
     .thumb_img{
         width: 25px;
     }
-    .thumb_img.saturno_img{
+    .thumb_img.saturn{
         width: 35px;
     }
     .sun_img{
@@ -215,7 +215,7 @@ main{
     .thumb_img{
         width: 30px;
     }
-    .thumb_img.saturno_img{
+    .thumb_img.saturn{
         width: 40px;
     }
     .change_theme_colors_wrapper .btn{
@@ -249,7 +249,7 @@ main{
     .thumb_img{
         width: 35px;
     }
-    .thumb_img.saturno_img{
+    .thumb_img.saturn{
         width: 45px;
     }
     .header_title{
@@ -264,14 +264,14 @@ main{
     .thumb_img{
         width: 40px;
     }
-    .thumb_img.saturno_img{
+    .thumb_img.saturn{
         width: 60px;
     }
     .big_img{
         max-width: 450px;
         max-height: 450px;
     }
-    .big_img.saturno_img{
+    .big_img.saturn{
         max-width: 600px;
         max-height: 262px;
     }

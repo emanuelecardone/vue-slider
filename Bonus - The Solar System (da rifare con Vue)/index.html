@@ -69,8 +69,8 @@
                 <!-- Sezione Planet Image -->
                 <div class="big_img_wrapper d-flex justify-content-center align-items-center">
                     <!-- L'immagine(tramite src) corrisponderà a quella del pianeta attivo in base ad activeObject da Vue
-                         l'alt corrisponderà al nome del pianeta attivo -->
-                    <img class="big_img" :src="solarSystem[activeObject].image" :alt="solarSystem[activeObject].name">
+                         l'alt corrisponderà al nome del pianeta attivo, anche la classe dinamica ma la classe in minuscolo -->
+                    <img class="big_img" :class="solarSystem[activeObject].name.toLowerCase()" :src="solarSystem[activeObject].image" :alt="solarSystem[activeObject].name">
                 </div>
 
                 <!-- Sezione Arrows Slider -->
@@ -78,6 +78,21 @@
                     <i class="fs-1 text-white fw-bolder fas fa-arrow-circle-left"></i>
                     <h4 class="fs-4 text-white fw-bolder text-uppercase mb-0 text-center">see more</h4>
                     <i class="fs-1 text-white fw-bolder fas fa-arrow-circle-right"></i>
+                </div>
+
+                <!-- Sezione Planet Thumbs -->
+                <div class="planet_thumbs_wrapper h_10 position-absolute">
+                    <div class="container-fluid h-100">
+                        <div class="row row-cols-8 h-100">
+                            <!-- Ciclo nell'array del solar system per prendere la src di ogni immagine -->
+                            <div v-for="(element,index) in solarSystem" class="col">
+                                <div class="single_thumb_wrapper w-100 h-100 d-flex justify-content-center align-items-center">
+                                    <!-- Assegno src dell'immagine attuale, alt e classe dinamica corrispondenti al nome del pianeta attuale, ma la classe la trasformo in minuscolo -->
+                                    <img class="thumb_img position-relative" :class="element.name.toLowerCase()" :src="element.image" :alt="element.name">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <!-- Sezione Planet Keys -->

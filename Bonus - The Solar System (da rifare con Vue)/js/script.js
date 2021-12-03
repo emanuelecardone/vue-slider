@@ -144,23 +144,21 @@ const app = new Vue(
 
 
 
-// const planetThumbsContainer = document.createElement('div');
+
 // const planetThumbsFluidContainer = document.createElement('div');
 // const planetThumbsRow = document.createElement('div');
 
 // // Classi di stile
 
-// planetThumbsContainer.classList.add('planet_thumbs_wrapper', 'h_10', 'position-absolute');
-// planetThumbsFluidContainer.classList.add('container-fluid', 'h-100')
-// planetThumbsRow.classList.add('row', 'row-cols-8', 'h-100', );
+// planetThumbsContainer.classList.add('');
+// planetThumbsFluidContainer.classList.add('
+// planetThumbsRow.classList.add( );
 
 // // Contenuto
 
 
 // // Inserimento in pagina
-// pageMain.append(, , r, r, , planetThumbsContainer, );
-// planetThumbsContainer.appendChild(planetThumbsFluidContainer);
-// planetThumbsFluidContainer.appendChild(planetThumbsRow);
+
 // planetInfosContainer.append(, , );
 
 // for(let i = 0; i < 8; i++){
@@ -169,14 +167,12 @@ const app = new Vue(
 //     const currentThumbsCol = document.createElement('div');
 //     const currentSingleThumbContainer = document.createElement('div');
 //     currentThumbsCol.classList.add('col');
-//     currentSingleThumbContainer.classList.add('single_thumb_wrapper','w-100', 'h-100', 'd-flex', 'justify-content-center', 'align-items-center');
-//     planetThumbsRow.appendChild(currentThumbsCol);
-//     currentThumbsCol.appendChild(currentSingleThumbContainer);
+//     currentSingleThumbContainer.classList.add('');
+//     planetThumbsRow.appendChild();
+//     currentThumbsCol.appendChild();
     
 // }
-// planetKeysContainer.appendChild(keysList);
-// sliderArrowsContainer.append(sliderLeftArrow, sliderMiddleTitle, sliderRightArrow);
-
+// 
 // // FOOTER
 // const pageFooter = document.querySelector('footer');
 // // Sezione social
