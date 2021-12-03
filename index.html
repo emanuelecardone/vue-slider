@@ -18,7 +18,7 @@
 
     <div id="root">
 
-        <div class="app-container">
+        <div class="app-container w-100 vh-100 d-flex justify-content-center align-items-center">
 
             <!-- Slider -->
             <div class="slider w_70 h-50 d-flex">
@@ -26,11 +26,11 @@
                 <div class="big-images-container w_70 h-100">
                     <!-- Single image container -->
                     <div class="single-image position-relative w-100 h-100 active">
-                        <img src="img/01.jpg" alt="">
+                        <img :src="sliderObjects[activeObject].image" :alt="sliderObjects[activeObject].alt">
 
                         <div class="single-image-text position-absolute w_90 text-right text-white">
-                            <h3>Titolo</h3>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, minus. Dolore tempore vitae quisquam ea amet. Laborum sequi itaque saepe eaque quae praesentium, quam officia, architecto, voluptatibus iste unde illo.</p>
+                            <h3>{{sliderObjects[activeObject].title}}</h3>
+                            <p>{{sliderObjects[activeObject].text}}</p>
                         </div>
                     </div>
                 </div>
@@ -49,8 +49,8 @@
                     </div>
                     <!-- End Arrow down -->
 
-                    <div class="single-thumb w-100 h_20 active">
-                        <img src="img/01.jpg" alt="">
+                    <div v-for="(element,index) in sliderObjects" class="single-thumb w-100 h_20" :class="{'active': index === activeObject}">
+                        <img :src="element.image" :alt="element.alt">
                     </div>
                 </div>
 
