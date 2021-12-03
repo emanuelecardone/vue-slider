@@ -41,11 +41,18 @@ const app = new Vue(
         },
 
         methods: {
+            // Funzione che incrementa l'activeObject di 1 (legata al click di down arrow)
             increaseIndex: function(){
                 this.activeObject = (this.activeObject < this.sliderObjects.length - 1) ? this.activeObject + 1 : 0;
             },
+            // Funzione che decrementa l'activeObject di 1 (legata al click di up arrow)
             decreaseIndex: function(){
                 this.activeObject = (this.activeObject > 0) ? this.activeObject - 1 : this.sliderObjects.length - 1;
+            },
+            // Funzione che cambia l'activeObject con l'indice (preso come parametro dall'html) corrispondente alla thumb che clicko
+            switchToThisIndex: function(thisIndex){
+                console.log(thisIndex);
+                this.activeObject = thisIndex;
             }
         }
 
