@@ -100,23 +100,6 @@ const app = new Vue(
 
 // // INIZIO
 
-// // BODY
-// const pageBody = document.querySelector('body');
-
-// // HEADER
-// const pageHeader = document.querySelector('header');
-// // Titolo header
-// // Variabile
-// const headerTitle = document.createElement('h1');
-// // Classi di stile
-// headerTitle.classList.add('header_title', 'text-white', 'text-center', 'fw-bold', 'text-uppercase');
-// // Contenuto
-// headerTitle.innerHTML = `
-//     the s<img src="img/sole.png" alt="immagine del sole" class="sun_img w_50p position-relative">lar system
-// `;
-// // Inserimento in pagina
-// pageHeader.appendChild(headerTitle);
-
 // // MAIN
 // const pageMain = document.querySelector('main');
 // // Container change theme, change theme, container titolo, container immagini, immagini
