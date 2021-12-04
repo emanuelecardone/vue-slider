@@ -126,7 +126,8 @@
                             <!-- Uso il numberOfIcons per imporre un limite al ciclo (corrisponde a 4) -->
                             <div v-for="(element,index) in numberOfIcons" class="col">
                                 <div class="social_sub_wrapper w-100 h-100 d-flex justify-content-center align-items-center">
-                                    <a href="#">
+                                    <!-- Up: aggiunto prevent.Default per evitare il refresh -->
+                                    <a @click.prevent href="#">
                                         <!-- Stampa la classe corrispondente al logo (incastrata con l'index del ciclo con 4 iterazioni) -->
                                         <i class="fab text-white fs-3" :class="iconsClasses[index]"></i>
                                     </a>
